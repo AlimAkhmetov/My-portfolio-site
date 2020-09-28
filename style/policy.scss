@@ -1,0 +1,158 @@
+/* Policy */
+
+$background-color-policy: #2a2d3c;
+
+body {
+  background-color: $background-color-policy;
+}
+
+.header-policy {
+  flex-direction: row;
+}
+
+.privacy-policy {
+  margin-top: 260px;
+
+  &__container {
+    width: 100%;
+    max-width: 1140px;
+  }
+
+  &__title {
+    font-size: 110px;
+    line-height: 107px;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  &__introduction {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    margin-bottom: 5px;
+  }
+}
+
+.nav-policy {
+  display: block;
+
+  & > .nav__item {
+    margin-right: 0;
+    padding-left: 20px;
+    position: relative;
+
+    .nav__link:hover {
+      opacity: 0.7;
+    }
+
+    .nav__link::after {
+      content: "";
+      background: url("/resources/img/policy/back.svg") center no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 1px;
+      left: -26px;
+      width: 17px;
+      height: 17px;
+      color: #fff;
+      opacity: 1;
+    }
+
+    .nav__link:hover::after {
+      opacity: 0.7;
+    }
+  }
+}
+
+/* Addaptive Policy*/
+
+@media (max-width: 1200px) {
+  .privacy-policy__container {
+    max-width: 970px;
+  }
+
+  .privacy-policy__title {
+    font-size: 90px;
+    line-height: 89px;
+  }
+}
+
+@media (max-width: 960px) {
+  .privacy-policy {
+    margin-top: 200px;
+
+    &__container {
+      max-width: 730px;
+    }
+
+    &__title {
+      font-size: 70px;
+      line-height: 69px;
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .privacy-policy {
+    margin-top: 180px;
+
+    &__container {
+      max-width: 560px;
+    }
+
+    &__title {
+      font-size: 50px;
+      line-height: 49px;
+    }
+
+    &__subtitle {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+
+    &__introduction {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .privacy-policy {
+    margin-top: 130px;
+
+    &__container {
+      max-width: 470px;
+    }
+
+    &__title {
+      font-size: 35px;
+      line-height: 35px;
+    }
+
+    &__subtitle {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    &__introduction {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .privacy-policy {
+    &__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+}
